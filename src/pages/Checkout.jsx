@@ -180,7 +180,7 @@ const Checkout = ({ cart, clearCart }) => {
               </p>
               <span style={{ fontSize: '0.7rem', color: 'var(--gold-dark)', textTransform: 'uppercase', letterSpacing: '0.1em', cursor: 'pointer', borderBottom: '1px solid var(--gold-dark)' }} onClick={() => alert('Opening Concierge Chat...')}>Contact Curator</span>
             </div>
-            <img src="https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&q=80" alt="Curator" style={{ width: '100px', height: '120px', objectFit: 'cover' }} />
+            <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80" alt="Curator" style={{ width: '100px', height: '120px', objectFit: 'cover' }} />
           </div>
         </div>
       </div>
