@@ -23,7 +23,7 @@ const Contact = () => {
             </div>
             <div className="form-group">
               <label className="form-label">Email Address</label>
-              <input type="email" className="form-input" placeholder="email@example.com" required />
+              <input type="email" className="form-input" placeholder="threads1172@gmail.com" required />
             </div>
             <div className="form-group">
               <label className="form-label">Message</label>
@@ -54,7 +54,7 @@ const Contact = () => {
           <div>
             <h3 className="h3" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem' }}>Contact Channels</h3>
             <p className="body-text">
-              E: contact@eliterings.pk <br />
+              E: threads1172@gmail.com <br />
               T: +92 331 8825206
             </p>
           </div>

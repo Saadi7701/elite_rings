@@ -81,8 +81,8 @@ const Home = ({ addToCart, products }) => {
       <section className="section" style={{ padding: 0 }}>
         <div className="heritage-split">
           <img 
-            src="https://images.unsplash.com/photo-1579562725510-9b439818820c?auto=format&fit=crop&q=80" 
-            alt="Craftsmanship" 
+            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80" 
+            alt="Master Jeweler at Work" 
             className="heritage-image" 
           />
           <div className="heritage-content">

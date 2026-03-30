@@ -39,7 +39,7 @@ const PrivacyPolicy = () => {
 
           <h2 className="h3" style={{ color: 'var(--text-primary)', marginTop: '2.5rem', marginBottom: '1rem' }}>5. Your Rights</h2>
           <p style={{ marginBottom: '1.5rem' }}>
-            You have the right to access, correct, or request the deletion of your personal information held by Elite Rings. For any inquiries regarding your data, please contact our privacy officer at privacy@eliterings.pk.
+            You have the right to access, correct, or request the deletion of your personal information held by Elite Rings. For any inquiries regarding your data, please contact our privacy officer at threads1172@gmail.com.
           </p>
 
           <p style={{ marginTop: '4rem', fontSize: '0.8rem', fontStyle: 'italic' }}>

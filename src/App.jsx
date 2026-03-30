@@ -50,10 +50,10 @@ function App() {
     } else {
       // dynamic mock fallback if empty
       const mock = [
-        { id: "ss1", title: "The Aurelian Crest", material: "Hand-carved solid gold signet, embodying the weight of legacy and precision.", price: 485000, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", featured: true },
-        { id: "ss2", title: "Celestial Droplets", material: "White Gold & Pave Diamonds", price: 320000, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" },
-        { id: "ss3", title: "Ethereal Strand", material: "South Sea Pearl", price: 215000, image: "https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80" },
-        { id: "ss4", title: "Unity Band No. 7", material: "Brushed Rose Gold", price: 189000, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" },
+        { id: "ss1", title: "The Aurelian Crest", material: "Premium Artificial Gold Plated Signet", price: 4850, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", featured: true },
+        { id: "ss2", title: "Celestial Halo", material: "Artificial Silver Diamond Sparkle", price: 3200, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" },
+        { id: "ss3", title: "Ethereal Pearl", material: "Hand-Crafted Faux Pearl Setting", price: 2150, image: "https://images.unsplash.com/photo-1573408302353-8b7468641dfb?auto=format&fit=crop&q=80" },
+        { id: "ss4", title: "Unity Band No. 1", material: "Brushed Rose Gold Artificial Alloy", price: 1890, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" },
       ];
       setProducts(mock);
     }

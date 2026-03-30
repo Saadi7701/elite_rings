@@ -39,7 +39,7 @@ const RefundPolicy = () => {
 
           <h2 className="h3" style={{ color: 'var(--text-primary)', marginTop: '2.5rem', marginBottom: '1rem' }}>5. Contact for Returns</h2>
           <p style={{ marginBottom: '1.5rem' }}>
-            To initiate a return or exchange, please contact our concierge at contact@eliterings.pk or visit our atelier in Gulberg, Lahore, with your original receipt.
+            To initiate a return or exchange, please contact our concierge at threads1172@gmail.com or visit our atelier in Gulberg, Lahore, with your original receipt.
           </p>
 
           <p style={{ marginTop: '4rem', fontSize: '0.8rem', fontStyle: 'italic' }}>

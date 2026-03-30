@@ -16,8 +16,8 @@ const About = () => {
 
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
         <img 
-          src="https://images.unsplash.com/photo-1542596594-649edbc13630?auto=format&fit=crop&q=80" 
-          alt="Our Workshop" 
+          src="https://images.unsplash.com/photo-1603561591411-0e7045c97e43?auto=format&fit=crop&q=80" 
+          alt="Our Master Artisan" 
           style={{ width: '100%', height: '600px', objectFit: 'cover' }} 
         />
         <div>
