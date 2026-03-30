@@ -6,7 +6,7 @@ const Heritage = () => {
     <motion.div className="container" initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ padding: '6rem 0' }}>
       <div className="heritage-split" style={{ marginBottom: '6rem' }}>
         <img 
-          src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80" 
+          src="/images/craftsman.jpg" 
           alt="Master Jeweler at Work" 
           className="heritage-image" 
         />

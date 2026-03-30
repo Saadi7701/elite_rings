@@ -46,80 +46,56 @@ const Home = ({ addToCart, products }) => {
         </div>
 
         <div className="product-grid">
-          {featuredProducts.map((product) => (
-            <motion.div 
-              key={product.id} 
-              className="product-card"
-              whileHover={{ y: -10 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="product-image-wrap">
-                {product.badge && <span className="product-badge">{product.badge}</span>}
-                <img src={product.image} alt={product.title} className="product-image" loading="lazy" />
-                <div className="product-actions-overlay">
-                  <button 
-                    className="add-to-bag-btn" 
-                    onClick={() => addToCart(product)}
-                  >
-                    Add to Bag
-                  </button>
-                </div>
+          {/* Hardcoded New Artifacts with local images */}
+          <motion.div className="product-card" whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
+            <div className="product-image-wrap">
+              <span className="product-badge">New Artifact</span>
+              <img src="/images/ring1.jpg" alt="Aurelian Crystal Halo" className="product-image" loading="lazy" />
+            </div>
+            <div className="product-info">
+              <div>
+                <h3 className="product-title">Aurelian Crystal Halo</h3>
+                <p className="product-material">Premium Artificial Alloy & Crystals</p>
               </div>
-              <div className="product-info">
-                <div>
-                  <h3 className="product-title">{product.title}</h3>
-                  <p className="product-material">{product.material}</p>
-                </div>
-                <span className="product-price">Rs.{product.price.toLocaleString()}</span>
+              <span className="product-price">Rs.2,500</span>
+            </div>
+          </motion.div>
+
+          <motion.div className="product-card" whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
+            <div className="product-image-wrap">
+              <span className="product-badge">Featured</span>
+              <img src="/images/ring2.jpg" alt="Golden Signet Crest" className="product-image" loading="lazy" />
+            </div>
+            <div className="product-info">
+              <div>
+                <h3 className="product-title">Golden Signet Crest</h3>
+                <p className="product-material">Gold Plated Polished Surface</p>
               </div>
-            </motion.div>
-          ))}
+              <span className="product-price">Rs.1,800</span>
+            </div>
+          </motion.div>
+
+          <motion.div className="product-card" whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
+            <div className="product-image-wrap">
+              <span className="product-badge">Elegant</span>
+              <img src="/images/ring3.jpg" alt="Midnight Silver Band" className="product-image" loading="lazy" />
+            </div>
+            <div className="product-info">
+              <div>
+                <h3 className="product-title">Midnight Silver Band</h3>
+                <p className="product-material">Silver Toned Artificial Alloy</p>
+              </div>
+              <span className="product-price">Rs.1,450</span>
+            </div>
+          </motion.div>
         </div>
       </section>
-
-      {/* Signature Highlights Section (Static Images) */}
-      <section className="section container" style={{ marginTop: '-4rem', marginBottom: '4rem' }}>
-        <h2 className="h2" style={{ marginBottom: '3rem', textAlign: 'center' }}>Featured Selection</h2>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
-          <div className="product-card" style={{ cursor: 'default' }}>
-            <div className="product-image-wrap">
-              <img src="https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80" alt="Artificial Gold Signet" className="product-image" />
-              <span className="product-badge">Static Pic</span>
-            </div>
-            <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-              <h3 className="h3" style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Premium Gold Plated Signet</h3>
-              <span style={{ color: 'var(--gold-dark)', fontWeight: 500 }}>Rs.2,500</span>
-            </div>
-          </div>
-          <div className="product-card" style={{ cursor: 'default' }}>
-            <div className="product-image-wrap">
-              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" alt="Crystal Sparkle Ring" className="product-image" />
-              <span className="product-badge">Static Pic</span>
-            </div>
-            <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-              <h3 className="h3" style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Crystal Sparkle Halo</h3>
-              <span style={{ color: 'var(--gold-dark)', fontWeight: 500 }}>Rs.3,200</span>
-            </div>
-          </div>
-          <div className="product-card" style={{ cursor: 'default' }}>
-            <div className="product-image-wrap">
-              <img src="https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" alt="Rose Gold Band" className="product-image" />
-              <span className="product-badge">Static Pic</span>
-            </div>
-            <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
-              <h3 className="h3" style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Elegant Rose Gold Band</h3>
-              <span style={{ color: 'var(--gold-dark)', fontWeight: 500 }}>Rs.1,450</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
 
       {/* Heritage Section */}
       <section className="section" style={{ padding: 0 }}>
         <div className="heritage-split">
           <img 
-            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80" 
+            src="/images/craftsman.jpg" 
             alt="Master Jeweler at Work" 
             className="heritage-image" 
           />
