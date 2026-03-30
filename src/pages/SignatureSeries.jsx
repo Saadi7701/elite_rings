@@ -2,7 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const SignatureSeries = ({ addToCart, products }) => {
-  const collection = products || [];
+  const staticProducts = [
+    { id: "s1", title: "Aurelian Halo", material: "Artificial Gold & Crystals", price: 2500, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", badge: "Static" },
+    { id: "s2", title: "Golden Signet", material: "Gold Plated Surface", price: 1800, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80", badge: "Static" },
+    { id: "s3", title: "Silver Band", material: "Silver Toned Alloy", price: 1450, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80", badge: "Static" }
+  ];
+
+  const collection = [...staticProducts, ...products];
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>

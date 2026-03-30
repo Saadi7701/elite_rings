@@ -4,7 +4,14 @@ import { ArrowRight, ArrowLeft } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Home = ({ addToCart, products }) => {
-  const featuredProducts = products && products.length > 0 ? products.slice(0, 3) : [];
+  const staticProducts = [
+    { id: "s1", title: "Aurelian Halo", material: "Artificial Gold & Crystals", price: 2500, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", badge: "Static" },
+    { id: "s2", title: "Golden Signet", material: "Gold Plated Surface", price: 1800, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80", badge: "Static" },
+    { id: "s3", title: "Silver Band", material: "Silver Toned Alloy", price: 1450, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80", badge: "Static" }
+  ];
+
+  const allProducts = [...staticProducts, ...products];
+  const featuredProducts = allProducts.length > 0 ? allProducts.slice(0, 6) : [];
 
   return (
     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8 }}>
@@ -46,48 +53,34 @@ const Home = ({ addToCart, products }) => {
         </div>
 
         <div className="product-grid">
-          {/* Hardcoded New Artifacts with local images */}
-          <motion.div className="product-card" whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
-            <div className="product-image-wrap">
-              <span className="product-badge">New Artifact</span>
-              <img src="/images/ring1.jpg" alt="Aurelian Crystal Halo" className="product-image" loading="lazy" />
-            </div>
-            <div className="product-info">
-              <div>
-                <h3 className="product-title">Aurelian Crystal Halo</h3>
-                <p className="product-material">Premium Artificial Alloy & Crystals</p>
+          {featuredProducts.map((product) => (
+            <motion.div 
+              key={product.id} 
+              className="product-card"
+              whileHover={{ y: -10 }}
+              transition={{ duration: 0.3 }}
+            >
+              <div className="product-image-wrap">
+                {product.badge && <span className="product-badge">{product.badge}</span>}
+                <img src={product.image} alt={product.title} className="product-image" loading="lazy" />
+                <div className="product-actions-overlay">
+                  <button 
+                    className="add-to-bag-btn" 
+                    onClick={() => addToCart(product)}
+                  >
+                    Add to Bag
+                  </button>
+                </div>
               </div>
-              <span className="product-price">Rs.2,500</span>
-            </div>
-          </motion.div>
-
-          <motion.div className="product-card" whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
-            <div className="product-image-wrap">
-              <span className="product-badge">Featured</span>
-              <img src="/images/ring2.jpg" alt="Golden Signet Crest" className="product-image" loading="lazy" />
-            </div>
-            <div className="product-info">
-              <div>
-                <h3 className="product-title">Golden Signet Crest</h3>
-                <p className="product-material">Gold Plated Polished Surface</p>
+              <div className="product-info">
+                <div>
+                  <h3 className="product-title">{product.title}</h3>
+                  <p className="product-material">{product.material}</p>
+                </div>
+                <span className="product-price">Rs.{product.price.toLocaleString()}</span>
               </div>
-              <span className="product-price">Rs.1,800</span>
-            </div>
-          </motion.div>
-
-          <motion.div className="product-card" whileHover={{ y: -10 }} transition={{ duration: 0.3 }}>
-            <div className="product-image-wrap">
-              <span className="product-badge">Elegant</span>
-              <img src="/images/ring3.jpg" alt="Midnight Silver Band" className="product-image" loading="lazy" />
-            </div>
-            <div className="product-info">
-              <div>
-                <h3 className="product-title">Midnight Silver Band</h3>
-                <p className="product-material">Silver Toned Artificial Alloy</p>
-              </div>
-              <span className="product-price">Rs.1,450</span>
-            </div>
-          </motion.div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
@@ -95,7 +88,7 @@ const Home = ({ addToCart, products }) => {
       <section className="section" style={{ padding: 0 }}>
         <div className="heritage-split">
           <img 
-            src="/images/craftsman.jpg" 
+            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80" 
             alt="Master Jeweler at Work" 
             className="heritage-image" 
           />

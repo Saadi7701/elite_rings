@@ -50,10 +50,9 @@ function App() {
     } else {
       // dynamic mock fallback if empty
       const mock = [
-        { id: "ss1", title: "The Aurelian Crest", material: "Premium Artificial Gold Plated Signet", price: 4850, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", featured: true },
-        { id: "ss2", title: "Celestial Halo", material: "Artificial Silver Diamond Sparkle", price: 3200, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" },
-        { id: "ss3", title: "Ethereal Pearl", material: "Hand-Crafted Faux Pearl Setting", price: 2150, image: "https://images.unsplash.com/photo-1573408302353-8b7468641dfb?auto=format&fit=crop&q=80" },
-        { id: "ss4", title: "Unity Band No. 1", material: "Brushed Rose Gold Artificial Alloy", price: 1890, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" },
+        { id: "h1", title: "Aurelian Halo", material: "Artificial Gold & Crystals", price: 2500, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", badge: "Static" },
+        { id: "h2", title: "Golden Signet", material: "Gold Plated Surface", price: 1800, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80", badge: "Static" },
+        { id: "h3", title: "Silver Band", material: "Silver Toned Alloy", price: 1450, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80", badge: "Static" },
       ];
       setProducts(mock);
     }
