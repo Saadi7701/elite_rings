@@ -77,6 +77,44 @@ const Home = ({ addToCart, products }) => {
         </div>
       </section>
 
+      {/* Signature Highlights Section (Static Images) */}
+      <section className="section container" style={{ marginTop: '-4rem', marginBottom: '4rem' }}>
+        <h2 className="h2" style={{ marginBottom: '3rem', textAlign: 'center' }}>Featured Selection</h2>
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2.5rem' }}>
+          <div className="product-card" style={{ cursor: 'default' }}>
+            <div className="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80" alt="Artificial Gold Signet" className="product-image" />
+              <span className="product-badge">Static Pic</span>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+              <h3 className="h3" style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Premium Gold Plated Signet</h3>
+              <span style={{ color: 'var(--gold-dark)', fontWeight: 500 }}>Rs.2,500</span>
+            </div>
+          </div>
+          <div className="product-card" style={{ cursor: 'default' }}>
+            <div className="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" alt="Crystal Sparkle Ring" className="product-image" />
+              <span className="product-badge">Static Pic</span>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+              <h3 className="h3" style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Crystal Sparkle Halo</h3>
+              <span style={{ color: 'var(--gold-dark)', fontWeight: 500 }}>Rs.3,200</span>
+            </div>
+          </div>
+          <div className="product-card" style={{ cursor: 'default' }}>
+            <div className="product-image-wrap">
+              <img src="https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" alt="Rose Gold Band" className="product-image" />
+              <span className="product-badge">Static Pic</span>
+            </div>
+            <div style={{ textAlign: 'center', marginTop: '1.5rem' }}>
+              <h3 className="h3" style={{ fontSize: '1.1rem', marginBottom: '0.5rem' }}>Elegant Rose Gold Band</h3>
+              <span style={{ color: 'var(--gold-dark)', fontWeight: 500 }}>Rs.1,450</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
       {/* Heritage Section */}
       <section className="section" style={{ padding: 0 }}>
         <div className="heritage-split">
