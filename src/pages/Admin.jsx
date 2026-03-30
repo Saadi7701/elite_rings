@@ -76,7 +76,7 @@ const Admin = ({ onProductChange }) => {
     } else {
       // default mock
       const mock = [
-        { id: 1, title: 'The Celestial Halo', material: '18K Yellow Gold', price: 4200, image: 'https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80', badge: 'Limited' }
+        { id: 1, title: 'The Celestial Halo', material: '18K Yellow Gold', price: 420000, image: 'https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80', badge: 'Limited' }
       ];
       setProducts(mock);
       localStorage.setItem('latelier_admin_products', JSON.stringify(mock));
@@ -174,7 +174,7 @@ const Admin = ({ onProductChange }) => {
   return (
     <div className="admin-layout">
       <aside className="admin-sidebar">
-        <h2 className="h2" style={{ color: 'white', marginBottom: '3rem', fontSize: '1.5rem', fontFamily: 'var(--font-serif)' }}>L'Atelier Admin</h2>
+        <h2 className="h2" style={{ color: 'white', marginBottom: '3rem', fontSize: '1.5rem', fontFamily: 'var(--font-serif)' }}>Elite Rings Admin</h2>
         
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
           <button className={`admin-sidebar-link ${activeTab === 'analysis' ? 'active' : ''}`} onClick={() => setActiveTab('analysis')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', width: '100%', textAlign: 'left' }}>
@@ -207,7 +207,7 @@ const Admin = ({ onProductChange }) => {
                   <input type="text" className="form-input" placeholder="Material (e.g. 18K Gold)" value={formData.material} onChange={e => setFormData({...formData, material: e.target.value})} required />
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
-                  <input type="number" className="form-input" placeholder="Price (€)" value={formData.price || ''} onChange={e => setFormData({...formData, price: Number(e.target.value)})} required />
+                  <input type="number" className="form-input" placeholder="Price (Rs.)" value={formData.price || ''} onChange={e => setFormData({...formData, price: Number(e.target.value)})} required />
                   <input type="text" className="form-input" placeholder="Badge (e.g. Limited)" value={formData.badge} onChange={e => setFormData({...formData, badge: e.target.value})} />
                   <div style={{ position: 'relative' }}>
                     <input type="file" accept="image/*" onChange={handleImageUpload} style={{ display: 'none' }} id="image-upload" />
@@ -244,7 +244,7 @@ const Admin = ({ onProductChange }) => {
                         <div style={{ fontWeight: 500 }}>{product.title}</div>
                         <div style={{ fontSize: '0.75rem', color: 'var(--text-secondary)' }}>{product.material}</div>
                       </td>
-                      <td>€{product.price}</td>
+                      <td>Rs.{product.price}</td>
                       <td>{product.badge && <span className="product-badge" style={{ position: 'relative', top: 0, left: 0 }}>{product.badge}</span>}</td>
                       <td>
                         <button onClick={() => { setFormData(product); setIsEditing(true); }} style={{ marginRight: '1rem', color: 'var(--text-secondary)' }}><Edit2 size={16} /></button>
@@ -264,7 +264,7 @@ const Admin = ({ onProductChange }) => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem' }}>
               <div style={{ padding: '2rem', backgroundColor: 'var(--bg-secondary)', borderLeft: '4px solid var(--gold-primary)' }}>
                 <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Total Revenue</span>
-                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>€128,450</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>Rs.128,450</div>
               </div>
               <div style={{ padding: '2rem', backgroundColor: 'var(--bg-secondary)', borderLeft: '4px solid var(--gold-primary)' }}>
                 <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Orders This Month</span>
@@ -272,7 +272,7 @@ const Admin = ({ onProductChange }) => {
               </div>
               <div style={{ padding: '2rem', backgroundColor: 'var(--bg-secondary)', borderLeft: '4px solid var(--gold-primary)' }}>
                 <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Avg. Order Value</span>
-                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>€3,058</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>Rs.3,058</div>
               </div>
             </div>
             <div style={{ height: '400px', backgroundColor: 'var(--bg-secondary)', padding: '2rem', borderRadius: '4px' }}>
@@ -289,12 +289,12 @@ const Admin = ({ onProductChange }) => {
                     axisLine={false} 
                     tickLine={false} 
                     tick={{ fill: 'var(--text-secondary)', fontSize: 12 }}
-                    tickFormatter={(value) => `€${value/1000}k`}
+                    tickFormatter={(value) => `Rs.${value/1000}k`}
                   />
                   <Tooltip 
                     cursor={{ fill: 'rgba(0,0,0,0.02)' }}
                     contentStyle={{ border: 'none', boxShadow: '0 10px 20px rgba(0,0,0,0.05)', borderRadius: '4px', fontSize: '13px' }}
-                    formatter={(value) => [`€${value.toLocaleString()}`, 'Revenue']}
+                    formatter={(value) => [`Rs.${value.toLocaleString()}`, 'Revenue']}
                   />
                   <Bar dataKey="revenue" fill="var(--gold-primary)" radius={[4, 4, 0, 0]} barSize={40} />
                 </BarChart>
@@ -334,7 +334,7 @@ const Admin = ({ onProductChange }) => {
                         <div style={{ fontSize: '0.7rem', color: 'var(--text-secondary)' }}>{order.address}</div>
                       </td>
                       <td>{new Date(order.created_at).toLocaleDateString()}</td>
-                      <td>€{order.total_price.toLocaleString()}</td>
+                      <td>Rs.{order.total_price.toLocaleString()}</td>
                       <td>
                         <span style={{ 
                           color: order.status === 'Processing' ? 'var(--gold-dark)' : 'var(--success)', 

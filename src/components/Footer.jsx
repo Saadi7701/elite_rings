@@ -6,9 +6,9 @@ const Footer = () => {
     <footer style={{ backgroundColor: 'var(--bg-secondary)', padding: '6rem 5% 2rem', marginTop: '6rem' }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
         <div>
-          <h3 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)' }}>L'Atelier</h3>
+          <h3 style={{ fontSize: '1.2rem', marginBottom: '1.5rem', fontFamily: 'var(--font-serif)' }}>Elite Rings</h3>
           <p style={{ color: 'var(--text-secondary)', fontSize: '0.8rem', lineHeight: '1.8' }}>
-            Defining the landscape of modern heritage since 1924.
+            Defining the landscape of modern Pakistani heritage.
           </p>
         </div>
         
@@ -40,7 +40,7 @@ const Footer = () => {
       </div>
       
       <div style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.7rem', borderTop: '1px solid var(--border-dark)', paddingTop: '2rem' }}>
-        &copy; {new Date().getFullYear()} L'ATELIER ÉLYSÉE. ALL RIGHTS RESERVED.
+        &copy; {new Date().getFullYear()} ELITE RINGS. ALL RIGHTS RESERVED.
       </div>
     </footer>
   );

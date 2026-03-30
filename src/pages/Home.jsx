@@ -33,7 +33,7 @@ const Home = ({ addToCart, products }) => {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
           <div>
             <h2 className="h2" style={{ marginBottom: '1rem' }}>New Artifacts</h2>
-            <p className="body-text">Each piece at L'Atelier Élysée is a dialogue between traditional craftsmanship and contemporary silhouette.</p>
+            <p className="body-text">Each piece at L'Atelier is a dialogue between traditional craftsmanship and contemporary silhouette.</p>
           </div>
           <div style={{ display: 'flex', gap: '1rem' }}>
             <button className="btn-outline" style={{ padding: '0.8rem', borderColor: 'var(--border-dark)' }}>
@@ -70,7 +70,7 @@ const Home = ({ addToCart, products }) => {
                   <h3 className="product-title">{product.title}</h3>
                   <p className="product-material">{product.material}</p>
                 </div>
-                <span className="product-price">€{product.price.toLocaleString()}</span>
+                <span className="product-price">Rs.{product.price.toLocaleString()}</span>
               </div>
             </motion.div>
           ))}
@@ -89,7 +89,7 @@ const Home = ({ addToCart, products }) => {
             <span className="subtitle" style={{ marginBottom: '1.5rem', display: 'block' }}>Our Craft</span>
             <h2 className="h2" style={{ marginBottom: '2rem' }}>The Heritage <br/>of Precision.</h2>
             <p className="body-text" style={{ marginBottom: '3rem' }}>
-              Every piece is forged by hand in our Parisian atelier, utilizing century-old techniques combined with modern metallurgy. We believe jewelry is not an accessory, but a legacy.
+              Every piece is forged by hand in our Lahore-based atelier, utilizing generations of craftsmanship combined with modern metallurgy. We believe jewelry is not an accessory, but a legacy.
             </p>
             <Link to="/heritage" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500 }}>
               Discover the Atelier <ArrowRight size={16} />

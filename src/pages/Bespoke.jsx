@@ -9,7 +9,7 @@ const Bespoke = () => {
         <h1 className="h1" style={{ margin: '1.5rem 0 2rem' }}>Bespoke Service</h1>
         <p className="body-text" style={{ margin: '0 auto 3rem', lineHeight: '1.8' }}>
           Engage directly with our master jewelers to conceptualize, design, and forge a piece that is distinctly yours. 
-          The Bespoke journey begins with a private consultation, material selection, and 3D architectural rendering before moving to our Parisian atelier where your legacy artifact is born.
+          The Bespoke journey begins with a private consultation, material selection, and 3D architectural rendering before moving to our Lahore-based atelier where your legacy artifact is born.
         </p>
         <button className="btn btn-primary">Request Consultation</button>
       </div>

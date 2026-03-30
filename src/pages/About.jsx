@@ -8,8 +8,9 @@ const About = () => {
         <span className="subtitle">Our Story</span>
         <h1 className="h1" style={{ margin: '1.5rem 0' }}>The Heritage of L'Atelier</h1>
         <p className="body-text" style={{ margin: '0 auto', lineHeight: '1.8' }}>
-          Founded in 1924, L'Atelier Élysée has been the destination for those who seek more than just jewelry. 
-          We believe in the power of artifacts—pieces that carry the weight of legacy and the precision of modern mastery.
+          Elite Rings has been the destination for those who seek more than just jewelry. 
+          In our Lahore-based atelier, we honor the legacy of Pakistani artisan craftsmanship, merging it with modern design and precision.
+          We believe in the power of artifacts—pieces that carry the weight of legacy and the soul of the maker.
         </p>
       </div>
 

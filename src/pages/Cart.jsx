@@ -41,7 +41,7 @@ const Cart = ({ cart, removeFromCart, updateQuantity }) => {
                 </div>
                 
                 <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', alignItems: 'flex-end', padding: '1rem 0' }}>
-                  <span style={{ fontSize: '1.1rem', fontWeight: 500 }}>€{(item.price * (item.quantity || 1)).toLocaleString()}</span>
+                  <span style={{ fontSize: '1.1rem', fontWeight: 500 }}>Rs.{(item.price * (item.quantity || 1)).toLocaleString()}</span>
                   
                   <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', borderBottom: '1px solid var(--border-dark)', paddingBottom: '0.5rem' }}>

@@ -18,7 +18,7 @@ const Navbar = ({ cartCount }) => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <Link to="/" className="nav-brand" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
         <img src="/latelier_logo.png" alt="L'Atelier Logo" style={{ height: '32px', display: 'block' }} />
-        <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', letterSpacing: '0.05em' }}>L'Atelier</span>
+        <span style={{ fontFamily: 'var(--font-serif)', fontSize: '1.25rem', letterSpacing: '0.05em' }}>Elite Rings</span>
       </Link>
       
       <div className="nav-links">

@@ -14,6 +14,9 @@ import Journal from './pages/Journal';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
 import Admin from './pages/Admin';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import RefundPolicy from './pages/RefundPolicy';
+import TermsConditions from './pages/TermsConditions';
 
 import { supabase, isSupabaseConfigured } from './supabase';
 
@@ -47,10 +50,10 @@ function App() {
     } else {
       // dynamic mock fallback if empty
       const mock = [
-        { id: "ss1", title: "The Aurelian Crest", material: "Hand-carved solid gold signet, embodying the weight of legacy and precision.", price: 4850, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", featured: true },
-        { id: "ss2", title: "Celestial Droplets", material: "White Gold & Pave Diamonds", price: 3200, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" },
-        { id: "ss3", title: "Ethereal Strand", material: "South Sea Pearl", price: 2150, image: "https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80" },
-        { id: "ss4", title: "Unity Band No. 7", material: "Brushed Rose Gold", price: 1890, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" },
+        { id: "ss1", title: "The Aurelian Crest", material: "Hand-carved solid gold signet, embodying the weight of legacy and precision.", price: 485000, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80", featured: true },
+        { id: "ss2", title: "Celestial Droplets", material: "White Gold & Pave Diamonds", price: 320000, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80" },
+        { id: "ss3", title: "Ethereal Strand", material: "South Sea Pearl", price: 215000, image: "https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80" },
+        { id: "ss4", title: "Unity Band No. 7", material: "Brushed Rose Gold", price: 189000, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80" },
       ];
       setProducts(mock);
     }
@@ -123,9 +126,9 @@ function App() {
           <Route path="/heritage" element={<Heritage />} />
           <Route path="/journal" element={<Journal />} />
           
-          <Route path="/privacy-policy" element={<About />} />
-          <Route path="/refund-policy" element={<About />} />
-          <Route path="/terms-and-conditions" element={<About />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/refund-policy" element={<RefundPolicy />} />
+          <Route path="/terms-and-conditions" element={<TermsConditions />} />
           
           <Route path="/cart" element={<Cart cart={cart} removeFromCart={removeFromCart} updateQuantity={updateQuantity} />} />
           <Route path="/checkout" element={<Checkout cart={cart} clearCart={clearCart} />} />

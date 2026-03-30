@@ -8,7 +8,7 @@ const Contact = () => {
         <span className="subtitle">Let's Connect</span>
         <h1 className="h1" style={{ margin: '1.5rem 0' }}>Consult with a Curator</h1>
         <p className="body-text" style={{ margin: '0 auto', lineHeight: '1.8' }}>
-          Our curators are available for private consultations at our Parisian atelier, worldwide via video call, 
+          Our curators are available for private consultations at our Lahore-based atelier, worldwide via video call, 
           or in person for select clients. Reach out to start your L'Atelier journey.
         </p>
       </div>
@@ -36,26 +36,26 @@ const Contact = () => {
           <div style={{ marginBottom: '4rem' }}>
             <h3 className="h3" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem' }}>Boutique Address</h3>
             <p className="body-text" style={{ fontSize: '1.1rem', color: 'var(--text-primary)' }}>
-              128 Place Vendôme <br />
-              75001 Paris, <br />
-              France
+              Gulberg III, <br />
+              Lahore, Pakistan, <br />
+              54000
             </p>
           </div>
           <div style={{ marginBottom: '4rem' }}>
             <h3 className="h3" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem' }}>Concierge Hours</h3>
             <p className="body-text">
-              Monday – Friday <br />
-              10:00 — 18:00 CET <br />
+              Monday – Saturday <br />
+              11:00 — 20:00 <br />
               <br />
-              Saturday <br />
-              11:00 — 16:00 CET
+              Sunday <br />
+              By Appointment Only
             </p>
           </div>
           <div>
             <h3 className="h3" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem' }}>Contact Channels</h3>
             <p className="body-text">
-              E: concierge@latelierelysee.com <br />
-              T: +33 (0) 1 42 42 42 42
+              E: contact@eliterings.pk <br />
+              T: +92 331 8825206
             </p>
           </div>
         </div>

@@ -6,7 +6,7 @@ import { CheckCircle } from 'lucide-react';
 
 const Checkout = ({ cart, clearCart }) => {
   const [formData, setFormData] = useState({
-    firstName: '', lastName: '', address: '', city: '', postal: '', country: 'France'
+    firstName: '', lastName: '', address: '', city: '', postal: '', country: 'Pakistan'
   });
   const [isOrdered, setIsOrdered] = useState(false);
   const [orderNum, setOrderNum] = useState('');
@@ -90,33 +90,33 @@ const Checkout = ({ cart, clearCart }) => {
           <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
             <div className="form-group">
               <label className="form-label">First Name</label>
-              <input type="text" className="form-input" placeholder="Julian" required onChange={e => setFormData({...formData, firstName: e.target.value})} />
+              <input type="text" className="form-input" placeholder="Ahmed" required onChange={e => setFormData({...formData, firstName: e.target.value})} />
             </div>
             <div className="form-group">
               <label className="form-label">Last Name</label>
-              <input type="text" className="form-input" placeholder="Aurelius" required onChange={e => setFormData({...formData, lastName: e.target.value})} />
+              <input type="text" className="form-input" placeholder="Khan" required onChange={e => setFormData({...formData, lastName: e.target.value})} />
             </div>
           </div>
 
           <div className="form-group">
             <label className="form-label">Address Line 1</label>
-            <input type="text" className="form-input" placeholder="128 Place Vendôme" required onChange={e => setFormData({...formData, address: e.target.value})} />
+            <input type="text" className="form-input" placeholder="Hali Road" required onChange={e => setFormData({...formData, address: e.target.value})} />
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
             <div className="form-group">
               <label className="form-label">City</label>
-              <input type="text" className="form-input" placeholder="Paris" required onChange={e => setFormData({...formData, city: e.target.value})} />
+              <input type="text" className="form-input" placeholder="Lahore" required onChange={e => setFormData({...formData, city: e.target.value})} />
             </div>
             <div className="form-group">
               <label className="form-label">Postal Code</label>
-              <input type="text" className="form-input" placeholder="75001" required onChange={e => setFormData({...formData, postal: e.target.value})} />
+              <input type="text" className="form-input" placeholder="54000" required onChange={e => setFormData({...formData, postal: e.target.value})} />
             </div>
           </div>
 
           <div className="form-group" style={{ marginBottom: '4rem' }}>
             <label className="form-label">Full Address / Location</label>
-            <input type="text" className="form-input" placeholder="e.g. 128 Place Vendôme, Paris" required onChange={e => setFormData({...formData, address: e.target.value})} />
+            <input type="text" className="form-input" placeholder="e.g. 45-C Hali Road, Gulberg III, Lahore" required onChange={e => setFormData({...formData, address: e.target.value})} />
           </div>
 
           <h3 className="h3" style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '1.5rem' }}>Payment & Delivery</h3>
@@ -135,7 +135,7 @@ const Checkout = ({ cart, clearCart }) => {
           </div>
 
           <button type="submit" className="btn btn-primary" style={{ padding: '1.5rem 3rem', width: '100%', fontSize: '0.9rem' }} disabled={cart.length === 0}>
-            Place Order (€{total.toLocaleString()})
+            Place Order (Rs.{total.toLocaleString()})
           </button>
         </form>
 
@@ -150,7 +150,7 @@ const Checkout = ({ cart, clearCart }) => {
                   <div>
                     <h4 style={{ fontSize: '0.9rem', fontFamily: 'var(--font-serif)', marginBottom: '0.25rem' }}>{item.title}</h4>
                     <p style={{ fontSize: '0.7rem', color: 'var(--text-secondary)', textTransform: 'uppercase' }}>QTY: {item.quantity || 1}</p>
-                    <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>€{(item.price * (item.quantity || 1)).toLocaleString()}</p>
+                    <p style={{ fontSize: '0.9rem', marginTop: '0.5rem' }}>Rs.{(item.price * (item.quantity || 1)).toLocaleString()}</p>
                   </div>
                 </div>
               ))}
@@ -159,7 +159,7 @@ const Checkout = ({ cart, clearCart }) => {
 
             <div className="summary-row">
               <span>Subtotal</span>
-              <span>€{subtotal.toLocaleString()}</span>
+              <span>Rs.{subtotal.toLocaleString()}</span>
             </div>
             <div className="summary-row">
               <span style={{ color: 'var(--text-secondary)' }}>Shipping</span>
@@ -168,7 +168,7 @@ const Checkout = ({ cart, clearCart }) => {
             
             <div className="summary-row total">
               <span style={{ fontSize: '1rem', textTransform: 'uppercase', letterSpacing: '0.1em' }}>Total</span>
-              <span>€{total.toLocaleString()}</span>
+              <span>Rs.{total.toLocaleString()}</span>
             </div>
           </div>
 

@@ -42,7 +42,7 @@ const SignatureSeries = ({ addToCart, products }) => {
                   <p className="product-material" style={item.featured ? { fontSize: '0.9rem', lineHeight: '1.6', textTransform: 'none', letterSpacing: 'normal' } : {}}>{item.material}</p>
                 </div>
                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '100%', marginTop: item.featured ? 'auto' : '0' }}>
-                  <span className="product-price" style={item.featured ? { fontSize: '1.25rem' } : {}}>€{item.price.toLocaleString()}</span>
+                  <span className="product-price" style={item.featured ? { fontSize: '1.25rem' } : {}}>Rs.{item.price.toLocaleString()}</span>
                   {item.featured && <button className="btn-outline" style={{ fontSize: '0.7rem', padding: '0.5rem 1rem' }} onClick={() => addToCart(item)}>Add to Bag</button>}
                 </div>
               </div>
