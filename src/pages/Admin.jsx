@@ -4,15 +4,7 @@ import { LayoutDashboard, Package, ShoppingCart, BarChart2, Plus, Edit2, Trash2 
 import { Link } from 'react-router-dom';
 import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 
-const analysisData = [
-  { name: 'May', revenue: 65000 },
-  { name: 'Jun', revenue: 78000 },
-  { name: 'Jul', revenue: 89000 },
-  { name: 'Aug', revenue: 95000 },
-  { name: 'Sep', revenue: 112000 },
-  { name: 'Oct', revenue: 128450 },
-];
-
+// Admin component handles product management and simple analytics via dynamic order processing
 const Admin = ({ onProductChange }) => {
   const [activeTab, setActiveTab] = useState('products');
   const [products, setProducts] = useState([]);
@@ -32,6 +24,38 @@ const Admin = ({ onProductChange }) => {
       fetchOrders();
     }
   }, [isAuthenticated]);
+
+  // Dynamic analytics calculation
+  const getAnalytics = () => {
+    const totalRevenue = orders.reduce((sum, order) => sum + (order.total_price || 0), 0);
+    const totalSales = orders.length;
+    const avgOrderValue = totalSales > 0 ? Math.round(totalRevenue / totalSales) : 0;
+
+    // Group orders by month for the chart
+    const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    const revenueByMonth = orders.reduce((acc, order) => {
+      const date = new Date(order.created_at);
+      const month = monthNames[date.getMonth()];
+      acc[month] = (acc[month] || 0) + (order.total_price || 0);
+      return acc;
+    }, {});
+
+    // Ensure last 6 months are shown
+    const last6Months = [];
+    for (let i = 5; i >= 0; i--) {
+      const d = new Date();
+      d.setMonth(d.getMonth() - i);
+      const month = monthNames[d.getMonth()];
+      last6Months.push({
+        name: month,
+        revenue: revenueByMonth[month] || 0
+      });
+    }
+
+    return { totalRevenue, totalSales, avgOrderValue, chartData: last6Months };
+  };
+
+  const analytics = getAnalytics();
 
   const fetchOrders = async () => {
     if (isSupabaseConfigured) {
@@ -264,20 +288,20 @@ const Admin = ({ onProductChange }) => {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '2rem', marginBottom: '3rem' }}>
               <div style={{ padding: '2rem', backgroundColor: 'var(--bg-secondary)', borderLeft: '4px solid var(--gold-primary)' }}>
                 <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Total Revenue</span>
-                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>Rs.128,450</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>Rs.{analytics.totalRevenue.toLocaleString()}</div>
               </div>
               <div style={{ padding: '2rem', backgroundColor: 'var(--bg-secondary)', borderLeft: '4px solid var(--gold-primary)' }}>
-                <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Orders This Month</span>
-                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>42</div>
+                <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Total Orders</span>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>{analytics.totalSales}</div>
               </div>
               <div style={{ padding: '2rem', backgroundColor: 'var(--bg-secondary)', borderLeft: '4px solid var(--gold-primary)' }}>
                 <span style={{ fontSize: '0.8rem', textTransform: 'uppercase', color: 'var(--text-secondary)' }}>Avg. Order Value</span>
-                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>Rs.3,058</div>
+                <div style={{ fontSize: '2.5rem', fontFamily: 'var(--font-serif)', marginTop: '0.5rem' }}>Rs.{analytics.avgOrderValue.toLocaleString()}</div>
               </div>
             </div>
             <div style={{ height: '400px', backgroundColor: 'var(--bg-secondary)', padding: '2rem', borderRadius: '4px' }}>
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={analysisData}>
+                <BarChart data={analytics.chartData}>
                   <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="rgba(0,0,0,0.05)" />
                   <XAxis 
                     dataKey="name" 
