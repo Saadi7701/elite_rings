@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Search, User, ShoppingBag } from 'lucide-react';
+import { Search, ShoppingBag } from 'lucide-react';
 
 const Navbar = ({ cartCount }) => {
   const [scrolled, setScrolled] = useState(false);
@@ -29,7 +29,6 @@ const Navbar = ({ cartCount }) => {
 
       <div className="nav-actions">
         <button className="nav-action-btn" aria-label="Search"><Search size={20} strokeWidth={1.5} /></button>
-        <button className="nav-action-btn" aria-label="Account"><User size={20} strokeWidth={1.5} /></button>
         <Link to="/cart" className="nav-action-btn" aria-label="Cart" style={{ position: 'relative' }}>
           <ShoppingBag size={20} strokeWidth={1.5} />
           {cartCount > 0 && (
