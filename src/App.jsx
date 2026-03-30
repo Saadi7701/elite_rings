@@ -50,9 +50,9 @@ function App() {
     } else {
       // dynamic mock fallback if empty
       const mock = [
-        { id: "h1", title: "Aurelian Halo", material: "Artificial Gold & Crystals", price: 2500, image: "https://images.unsplash.com/photo-1603561591411-0e7045c97e43?auto=format&fit=crop&w=800&q=80", badge: "Static" },
+        { id: "h1", title: "Aurelian Halo", material: "Artificial Gold & Crystals", price: 2500, image: "/images/aurelian_halo.jpg", badge: "Static" },
         { id: "h2", title: "Golden Signet", material: "Gold Plated Surface", price: 1800, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80", badge: "Static" },
-        { id: "h3", title: "Silver Band", material: "Silver Toned Alloy", price: 1450, image: "https://images.unsplash.com/photo-1627280333470-394fcd61c6b5?auto=format&fit=crop&w=800&q=80", badge: "Static" },
+        { id: "h3", title: "Silver Band", material: "Silver Toned Alloy", price: 1450, image: "/images/silver_band.jpg", badge: "Static" },
       ];
       setProducts(mock);
     }
