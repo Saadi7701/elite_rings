@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 // Pages
 import Home from './pages/Home';
 import SignatureSeries from './pages/SignatureSeries';
+import CategoryPage from './pages/CategoryPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Bespoke from './pages/Bespoke';
@@ -119,6 +120,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home addToCart={addToCart} products={products} />} />
           <Route path="/collections" element={<SignatureSeries addToCart={addToCart} products={products} />} />
+          <Route path="/rings" element={<CategoryPage addToCart={addToCart} products={products} category="Rings" />} />
+          <Route path="/necklaces" element={<CategoryPage addToCart={addToCart} products={products} category="Necklaces" />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/bespoke" element={<Bespoke />} />

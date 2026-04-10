@@ -16,7 +16,7 @@ const Admin = ({ onProductChange }) => {
   );
   const [passwordInput, setPasswordInput] = useState('');
   
-  const [formData, setFormData] = useState({ id: null, title: '', material: '', price: 0, image: '', badge: '' });
+  const [formData, setFormData] = useState({ id: null, title: '', material: '', price: 0, image: '', badge: '', category: 'Rings' });
 
   useEffect(() => {
     if (isAuthenticated) {
@@ -148,7 +148,7 @@ const Admin = ({ onProductChange }) => {
   };
 
   const resetForm = () => {
-    setFormData({ id: null, title: '', material: '', price: 0, image: '', badge: '' });
+    setFormData({ id: null, title: '', material: '', price: 0, image: '', badge: '', category: 'Rings' });
     setIsEditing(false);
   };
 
@@ -226,9 +226,13 @@ const Admin = ({ onProductChange }) => {
             <div style={{ backgroundColor: 'var(--bg-secondary)', padding: '2rem', marginBottom: '3rem', borderRadius: '4px' }}>
               <h3 className="h3" style={{ fontSize: '1.2rem', marginBottom: '1.5rem' }}>{isEditing ? 'Edit Product' : 'Add New Product'}</h3>
               <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem' }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
                   <input type="text" className="form-input" placeholder="Product Title" value={formData.title} onChange={e => setFormData({...formData, title: e.target.value})} required />
                   <input type="text" className="form-input" placeholder="Material (e.g. 18K Gold)" value={formData.material} onChange={e => setFormData({...formData, material: e.target.value})} required />
+                  <select className="form-input" value={formData.category} onChange={e => setFormData({...formData, category: e.target.value})} required>
+                    <option value="Rings">Rings</option>
+                    <option value="Necklaces">Necklaces</option>
+                  </select>
                 </div>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
                   <input type="number" className="form-input" placeholder="Price (Rs.)" value={formData.price || ''} onChange={e => setFormData({...formData, price: Number(e.target.value)})} required />

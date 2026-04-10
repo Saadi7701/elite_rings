@@ -35,52 +35,88 @@ const Home = ({ addToCart, products }) => {
         </div>
       </section>
 
-      {/* New Artifacts Section */}
+      {/* Category Selection Section */}
       <section className="section container">
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '2rem' }}>
-          <div>
-            <h2 className="h2" style={{ marginBottom: '1rem' }}>New Artifacts</h2>
-            <p className="body-text">Each piece at L'Atelier is a dialogue between traditional craftsmanship and contemporary silhouette.</p>
-          </div>
-          <div style={{ display: 'flex', gap: '1rem' }}>
-            <button className="btn-outline" style={{ padding: '0.8rem', borderColor: 'var(--border-dark)' }}>
-              <ArrowLeft size={18} />
-            </button>
-            <button className="btn-outline" style={{ padding: '0.8rem', borderColor: 'var(--border-dark)' }}>
-              <ArrowRight size={18} />
-            </button>
-          </div>
+        <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
+          <h2 className="h2" style={{ marginBottom: '1rem' }}>Shop by Category</h2>
+          <p className="body-text">Select a category to explore our curated pieces.</p>
         </div>
 
-        <div className="product-grid">
-          {featuredProducts.map((product) => (
+        <div style={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          gap: '4rem', 
+          flexWrap: 'wrap'
+        }}>
+          {/* Rings Category */}
+          <Link to="/rings" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
             <motion.div 
-              key={product.id} 
-              className="product-card"
-              whileHover={{ y: -10 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              style={{
+                width: 'min(300px, 80vw)',
+                aspectRatio: '1/1',
+                height: 'auto',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                marginBottom: '1.5rem',
+                border: '1px solid var(--border-dark)'
+              }}
             >
-              <div className="product-image-wrap">
-                {product.badge && <span className="product-badge">{product.badge}</span>}
-                <img src={product.image} alt={product.title} className="product-image" loading="lazy" />
-                <div className="product-actions-overlay">
-                  <button 
-                    className="add-to-bag-btn" 
-                    onClick={() => addToCart(product)}
-                  >
-                    Add to Bag
-                  </button>
-                </div>
-              </div>
-              <div className="product-info">
-                <div>
-                  <h3 className="product-title">{product.title}</h3>
-                  <p className="product-material">{product.material}</p>
-                </div>
-                <span className="product-price">Rs.{product.price.toLocaleString()}</span>
+              <img 
+                src="https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80&w=600" 
+                alt="Rings Collection" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+              <div style={{
+                position: 'absolute',
+                top: 0, left: 0, width: '100%', height: '100%',
+                backgroundColor: 'rgba(0,0,0,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>Rings</h3>
               </div>
             </motion.div>
-          ))}
+          </Link>
+
+          {/* Necklaces Category */}
+          <Link to="/necklaces" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              style={{
+                width: 'min(300px, 80vw)',
+                aspectRatio: '1/1',
+                height: 'auto',
+                borderRadius: '50%',
+                overflow: 'hidden',
+                position: 'relative',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                marginBottom: '1.5rem',
+                border: '1px solid var(--border-dark)'
+              }}
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80&w=600" 
+                alt="Necklaces Collection" 
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+              <div style={{
+                position: 'absolute',
+                top: 0, left: 0, width: '100%', height: '100%',
+                backgroundColor: 'rgba(0,0,0,0.2)',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center'
+              }}>
+                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>Necklaces</h3>
+              </div>
+            </motion.div>
+          </Link>
         </div>
       </section>
 
