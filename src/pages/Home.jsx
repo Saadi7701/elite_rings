@@ -125,17 +125,17 @@ const Home = ({ addToCart, products }) => {
         <div className="heritage-split">
           <img 
             src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80" 
-            alt="Master Jeweler at Work" 
+            alt="IJ Master Artisan" 
             className="heritage-image" 
           />
           <div className="heritage-content">
             <span className="subtitle" style={{ marginBottom: '1.5rem', display: 'block' }}>Our Craft</span>
-            <h2 className="h2" style={{ marginBottom: '2rem' }}>The Heritage <br/>of Precision.</h2>
+            <h2 className="h2" style={{ marginBottom: '2rem' }}>Italian <br/>Mastery.</h2>
             <p className="body-text" style={{ marginBottom: '3rem' }}>
-              Every piece is forged by hand in our Lahore-based atelier, utilizing generations of craftsmanship combined with modern metallurgy. We believe jewelry is not an accessory, but a legacy.
+              Every piece is forged by hand in our Italian-inspired atelier, utilizing generations of craftsmanship combined with modern metallurgy. At IJ Gioielli, we believe jewelry is not an accessory, but a legacy.
             </p>
             <Link to="/heritage" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500 }}>
-              Discover the Atelier <ArrowRight size={16} />
+              Discover the Studio <ArrowRight size={16} />
             </Link>
           </div>
         </div>

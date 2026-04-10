@@ -177,7 +177,12 @@ const Admin = ({ onProductChange }) => {
     return (
       <div style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--bg-secondary)' }}>
         <div style={{ backgroundColor: 'white', padding: '4rem', borderRadius: '4px', textAlign: 'center', maxWidth: '400px', width: '90%' }}>
-          <h1 className="h2" style={{ marginBottom: '2rem' }}>Admin Portal</h1>
+          <div>
+            <h3 className="h2" style={{ fontSize: '1.5rem', marginBottom: '1rem', letterSpacing: '0.2em' }}>IJ GIOIELLI</h3>
+            <p className="body-text" style={{ fontSize: '0.8rem', maxWidth: '250px', lineHeight: '1.6', margin: '0 auto 2rem' }}>
+              Artisan jewelry crafted in the Italian tradition of precision and grace. Since 1924.
+            </p>
+          </div>
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
             <input 
               type="password" 
@@ -198,7 +203,7 @@ const Admin = ({ onProductChange }) => {
   return (
     <div className="admin-layout">
       <aside className="admin-sidebar">
-        <h2 className="h2" style={{ color: 'white', marginBottom: '3rem', fontSize: '1.5rem', fontFamily: 'var(--font-serif)' }}>Elite Rings Admin</h2>
+        <h2 className="h2" style={{ color: 'white', marginBottom: '3rem', fontSize: '1.5rem', fontFamily: 'var(--font-serif)', letterSpacing: '0.1em' }}>IJ ADMIN</h2>
         
         <nav style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
           <button className={`admin-sidebar-link ${activeTab === 'analysis' ? 'active' : ''}`} onClick={() => setActiveTab('analysis')} style={{ display: 'flex', alignItems: 'center', gap: '1rem', width: '100%', textAlign: 'left' }}>

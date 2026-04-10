@@ -6,11 +6,10 @@ const About = () => {
     <motion.div className="container" initial={{ opacity: 0 }} animate={{ opacity: 1 }} style={{ padding: '6rem 0' }}>
       <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', marginBottom: '4rem' }}>
         <span className="subtitle">Our Story</span>
-        <h1 className="h1" style={{ margin: '1.5rem 0' }}>The Heritage of L'Atelier</h1>
+        <h1 className="h1" style={{ margin: '1.5rem 0' }}>The Heritage of IJ Gioielli</h1>
         <p className="body-text" style={{ margin: '0 auto', lineHeight: '1.8' }}>
-          Elite Rings has been the destination for those who seek more than just jewelry. 
-          In our Lahore-based atelier, we honor the legacy of Pakistani artisan craftsmanship, merging it with modern design and precision.
-          We believe in the power of artifacts—pieces that carry the weight of legacy and the soul of the maker.
+          Founded in 1924, IJ Gioielli has been the destination for those who seek more than just jewelry. 
+          We believe in the power of artworks—pieces that carry the weight of legacy and the precision of modern mastery in the Italian tradition.
         </p>
       </div>
 
