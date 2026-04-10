@@ -23,10 +23,10 @@ const Home = ({ addToCart, products }) => {
           className="hero-bg" 
         />
         <div className="hero-content">
-          <span className="hero-subtitle">The Inaugural Collection</span>
-          <h1 className="h1 hero-title">Aurelian<br/><i>Grace.</i></h1>
+          <span className="hero-subtitle">The Eastern Heritage Collection</span>
+          <h1 className="h1 hero-title">Eastern<br/><i>Grace.</i></h1>
           <p className="hero-desc">
-            Discover a symphony of hand-carved gold and ethically sourced diamonds, curated for the modern collector of fine artifacts.
+            Discover a symphony of hand-forged gold and precious stones, curated with the deep soul and artisan mastery of Asian heritage.
           </p>
           <div className="hero-actions">
             <Link to="/collections" className="btn btn-primary">Explore Collection</Link>
@@ -66,7 +66,7 @@ const Home = ({ addToCart, products }) => {
               }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80&w=600" 
+                src="https://images.unsplash.com/photo-1598560863915-452136773517?auto=format&fit=crop&q=80&w=800" 
                 alt="Rings Collection" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -101,7 +101,7 @@ const Home = ({ addToCart, products }) => {
               }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80&w=600" 
+                src="https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80&w=800" 
                 alt="Necklaces Collection" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -130,9 +130,9 @@ const Home = ({ addToCart, products }) => {
           />
           <div className="heritage-content">
             <span className="subtitle" style={{ marginBottom: '1.5rem', display: 'block' }}>Our Craft</span>
-            <h2 className="h2" style={{ marginBottom: '2rem' }}>Italian <br/>Mastery.</h2>
+            <h2 className="h2" style={{ marginBottom: '2rem' }}>Eastern <br/>Mastery.</h2>
             <p className="body-text" style={{ marginBottom: '3rem' }}>
-              Every piece is forged by hand in our Italian-inspired atelier, utilizing generations of craftsmanship combined with modern metallurgy. At IJ Gioielli, we believe jewelry is not an accessory, but a legacy.
+              Every piece is forged by hand in our heritage-inspired atelier, utilizing generations of Asian craftsmanship combined with modern metallurgy. At JI Jewels, we believe jewelry is not an accessory, but a legacy.
             </p>
             <Link to="/heritage" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500 }}>
               Discover the Studio <ArrowRight size={16} />

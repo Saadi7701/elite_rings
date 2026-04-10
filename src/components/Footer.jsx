@@ -6,9 +6,9 @@ const Footer = () => {
     <footer style={{ backgroundColor: 'var(--bg-secondary)', padding: '6rem 5% 2rem', marginTop: '6rem' }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '3rem', marginBottom: '4rem' }}>
         <div>
-          <h3 className="h2" style={{ fontSize: '1.5rem', marginBottom: '1rem', letterSpacing: '0.2em' }}>IJ GIOIELLI</h3>
+          <h3 className="h2" style={{ fontSize: '1.5rem', marginBottom: '1rem', letterSpacing: '0.2em' }}>JI JEWELS</h3>
           <p className="body-text" style={{ fontSize: '0.8rem', maxWidth: '250px', lineHeight: '1.6' }}>
-            Artisan jewelry crafted in the Italian tradition of precision and grace. Since 1924.
+            Artisan jewelry crafted in the deep tradition of Asian heritage and timeless grace. Since 1924.
           </p>
         </div>
         
