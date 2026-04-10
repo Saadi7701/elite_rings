@@ -8,28 +8,11 @@ const About = () => {
         <span className="subtitle">Our Story</span>
         <h1 className="h1" style={{ margin: '1.5rem 0' }}>The Heritage of JI Jewels</h1>
         <p className="body-text" style={{ margin: '0 auto', lineHeight: '1.8' }}>
-          Founded in 1924, JI Jewels has been the destination for those who seek more than just jewelry. 
-          We believe in the power of artworks—pieces that carry the weight of legacy and the precision of modern mastery in the Asian tradition.
+          JI Jewels has been the destination for those who seek more than just jewelry. 
+          We believe in the power of artworks—curated artificial pieces that carry the weight of legacy and the precision of modern mastery in the Asian tradition.
         </p>
       </div>
 
-      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
-        <img 
-          src="https://images.unsplash.com/photo-1603561591411-0e7045c97e43?auto=format&fit=crop&q=80" 
-          alt="Our Master Artisan" 
-          style={{ width: '100%', height: '600px', objectFit: 'cover' }} 
-        />
-        <div>
-          <h2 className="h2" style={{ marginBottom: '2rem' }}>Crafting with Purpose</h2>
-          <p className="body-text" style={{ marginBottom: '2rem' }}>
-            Every ring, pendant, and bracelet that leaves our atelier is a symphony of hand-carved gold and ethically sourced diamonds. 
-            Our master jewelers spend hundreds of hours on a single piece, ensuring that every facet catches the light exactly as intended.
-          </p>
-          <p className="body-text">
-            We are committed to sustainability and transparency, ensuring that every material we use is sourced with the deepest respect for the earth and the hands that harvest it.
-          </p>
-        </div>
-      </div>
     </motion.div>
   );
 };

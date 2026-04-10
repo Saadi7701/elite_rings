@@ -180,7 +180,7 @@ const Admin = ({ onProductChange }) => {
           <div>
             <h3 className="h2" style={{ fontSize: '1.5rem', marginBottom: '1rem', letterSpacing: '0.2em' }}>JI JEWELS</h3>
             <p className="body-text" style={{ fontSize: '0.8rem', maxWidth: '250px', lineHeight: '1.6', margin: '0 auto 2rem' }}>
-              Artisan jewelry crafted in the deep tradition of Asian heritage and timeless grace. Since 1924.
+              Artisan jewelry crafted in the deep tradition of Asian heritage and timeless grace.
             </p>
           </div>
           <form onSubmit={handleLogin} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

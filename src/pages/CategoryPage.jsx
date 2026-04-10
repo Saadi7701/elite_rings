@@ -4,15 +4,16 @@ import { motion } from 'framer-motion';
 const CategoryPage = ({ addToCart, products, category }) => {
   const staticProducts = [
     // Rings
-    { id: "sr1", category: "Rings", title: "Lotus Band", material: "18K Gold & Rubies", price: 85000, image: "https://images.unsplash.com/photo-1605100804763-247f6612d54e?auto=format&fit=crop&q=80&w=800", badge: "Signature" },
-    { id: "sr2", category: "Rings", title: "Midnight Solitaire", material: "Black Diamond & Platinum", price: 120000, image: "https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&q=80&w=800" },
-    { id: "sr3", category: "Rings", title: "Unity Knot", material: "Rose Gold Weaver", price: 45000, image: "https://images.unsplash.com/photo-1620656798359-fd361c8d30d9?auto=format&fit=crop&q=80&w=800" },
+    { id: "sr1", category: "Rings", title: "Lotus Band", material: "Premium Gold Plated & Ruby Glass", price: 2500, image: "/images/ring_1.jpg", badge: "Signature" },
+    { id: "sr2", category: "Rings", title: "Midnight Solitaire", material: "Black Zirconia & Silver Polish", price: 1800, image: "/images/ring_2.jpg" },
+    { id: "sr3", category: "Rings", title: "Unity Knot", material: "Rose Gold Tone Alloy", price: 1500, image: "/images/ring_3.jpg" },
+    { id: "sr4", category: "Rings", title: "Crimson Halo", material: "Red Zircon & Gold Polish", price: 2200, image: "/images/ring_4.jpg" },
     
     // Necklaces
-    { id: "sn1", category: "Necklaces", title: "Celestial Droplet", material: "Sapphire & White Gold", price: 155000, image: "https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80&w=800", badge: "Heirloom" },
-    { id: "sn2", category: "Necklaces", title: "Imperial Silk", material: "Emerald & Gold Choker", price: 210000, image: "https://images.unsplash.com/photo-1611085507273-03aa044957e8?auto=format&fit=crop&q=80&w=800" },
-    { id: "sn3", category: "Necklaces", title: "Pearl of the Orient", material: "South Sea Pearls", price: 95000, image: "https://images.unsplash.com/photo-1599643477341-2b638c41460a?auto=format&fit=crop&q=80&w=800" },
-    { id: "sn4", category: "Necklaces", title: "Golden Weaver", material: "24K Foil Detail", price: 35000, image: "https://images.unsplash.com/photo-1616150638538-ffb0679a3fc4?auto=format&fit=crop&q=80&w=800" }
+    { id: "sn1", category: "Necklaces", title: "Celestial Droplet", material: "Blue Crystal & Rhodium Polish", price: 3500, image: "/images/necklace_1.webp", badge: "Best Seller" },
+    { id: "sn2", category: "Necklaces", title: "Imperial Silk", material: "Emerald Toned Zircon & Gold Polish", price: 4200, image: "/images/necklace_2.jpg" },
+    { id: "sn3", category: "Necklaces", title: "Pearl of the Orient", material: "Synthetic South Sea Pearls", price: 2800, image: "/images/necklace_3.jpg" },
+    { id: "sn4", category: "Necklaces", title: "Golden Weaver", material: "Artistic Gold Toned Mesh", price: 1200, image: "/images/necklace_4.jpg" }
   ];
 
   const allCategoryProducts = [

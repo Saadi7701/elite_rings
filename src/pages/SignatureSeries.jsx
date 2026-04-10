@@ -3,9 +3,17 @@ import { motion } from 'framer-motion';
 
 const SignatureSeries = ({ addToCart, products }) => {
   const staticProducts = [
-    { id: "s1", title: "Aurelian Halo", material: "Artificial Gold & Crystals", price: 2500, image: "/images/aurelian_halo.jpg", badge: "Static" },
-    { id: "s2", title: "Golden Signet", material: "Gold Plated Surface", price: 1800, image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=800&q=80", badge: "Static" },
-    { id: "s3", title: "Silver Band", material: "Silver Toned Alloy", price: 1450, image: "/images/silver_band.jpg", badge: "Static" }
+    // Rings
+    { id: "sr1", title: "Lotus Band", material: "Premium Gold Plated & Ruby Glass", price: 2500, image: "/images/ring_1.jpg", badge: "Signature" },
+    { id: "sr2", title: "Midnight Solitaire", material: "Black Zirconia & Silver Polish", price: 1800, image: "/images/ring_2.jpg" },
+    { id: "sr3", title: "Unity Knot", material: "Rose Gold Tone Alloy", price: 1500, image: "/images/ring_3.jpg" },
+    { id: "sr4", title: "Crimson Halo", material: "Red Zircon & Gold Polish", price: 2200, image: "/images/ring_4.jpg" },
+    
+    // Necklaces
+    { id: "sn1", title: "Celestial Droplet", material: "Blue Crystal & Rhodium Polish", price: 3500, image: "/images/necklace_1.webp", badge: "Best Seller" },
+    { id: "sn2", title: "Imperial Silk", material: "Emerald Toned Zircon & Gold Polish", price: 4200, image: "/images/necklace_2.jpg" },
+    { id: "sn3", title: "Pearl of the Orient", material: "Synthetic South Sea Pearls", price: 2800, image: "/images/necklace_3.jpg" },
+    { id: "sn4", title: "Golden Weaver", material: "Artistic Gold Toned Mesh", price: 1200, image: "/images/necklace_4.jpg" }
   ];
 
   const collection = [...staticProducts, ...products];
@@ -56,16 +64,6 @@ const SignatureSeries = ({ addToCart, products }) => {
           ))}
         </div>
 
-        <div style={{ textAlign: 'center', padding: '6rem 0', marginTop: '4rem', backgroundColor: 'var(--bg-secondary)', borderRadius: '4px' }}>
-          <h2 className="h2" style={{ marginBottom: '1rem' }}>Experience the Collection</h2>
-          <p className="body-text" style={{ margin: '0 auto 2rem' }}>
-            Our flagship atelier in the heart of the capital offers private viewings by appointment. Discover the weight and warmth of our signature gold in person.
-          </p>
-          <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center' }}>
-            <button className="btn btn-outline" onClick={() => alert('Redirecting to Concierge Booking system...')}>Book Private Viewing</button>
-            <button className="btn btn-primary" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>Digital Lookbook</button>
-          </div>
-        </div>
       </div>
     </motion.div>
   );

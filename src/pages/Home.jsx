@@ -30,8 +30,23 @@ const Home = ({ addToCart, products }) => {
           </p>
           <div className="hero-actions">
             <Link to="/collections" className="btn btn-primary">Explore Collection</Link>
-            <Link to="/journal" className="btn btn-outline" style={{ color: 'white', borderColor: 'rgba(255,255,255,0.3)' }}>View Film</Link>
           </div>
+        </div>
+
+        {/* Italian style Powered By credits */}
+        <div style={{
+          position: 'absolute',
+          bottom: '2rem',
+          right: '5%',
+          color: 'rgba(255,255,255,0.6)',
+          fontFamily: 'var(--font-serif)',
+          fontStyle: 'italic',
+          fontSize: '0.8rem',
+          letterSpacing: '0.05em',
+          zIndex: 2,
+          pointerEvents: 'none'
+        }}>
+          Powered By BlueMoon
         </div>
       </section>
 
@@ -107,7 +122,7 @@ const Home = ({ addToCart, products }) => {
               }}
             >
               <img 
-                src="/images/silver_band.jpg" 
+                src="/images/necklace_1.webp" 
                 alt="Necklaces Collection" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
@@ -134,26 +149,6 @@ const Home = ({ addToCart, products }) => {
         </div>
       </section>
 
-      {/* Heritage Section */}
-      <section className="section" style={{ padding: 0 }}>
-        <div className="heritage-split">
-          <img 
-            src="https://images.unsplash.com/photo-1596944924616-7b38e7cfac36?auto=format&fit=crop&q=80" 
-            alt="IJ Master Artisan" 
-            className="heritage-image" 
-          />
-          <div className="heritage-content">
-            <span className="subtitle" style={{ marginBottom: '1.5rem', display: 'block' }}>Our Craft</span>
-            <h2 className="h2" style={{ marginBottom: '2rem' }}>Eastern <br/>Mastery.</h2>
-            <p className="body-text" style={{ marginBottom: '3rem' }}>
-              Every piece is forged by hand in our heritage-inspired atelier, utilizing generations of Asian craftsmanship combined with modern metallurgy. At JI Jewels, we believe jewelry is not an accessory, but a legacy.
-            </p>
-            <Link to="/heritage" style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 500 }}>
-              Discover the Studio <ArrowRight size={16} />
-            </Link>
-          </div>
-        </div>
-      </section>
     </motion.div>
   );
 };

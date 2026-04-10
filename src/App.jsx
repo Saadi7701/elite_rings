@@ -9,8 +9,6 @@ import SignatureSeries from './pages/SignatureSeries';
 import CategoryPage from './pages/CategoryPage';
 import About from './pages/About';
 import Contact from './pages/Contact';
-import Bespoke from './pages/Bespoke';
-import Heritage from './pages/Heritage';
 import Journal from './pages/Journal';
 import Cart from './pages/Cart';
 import Checkout from './pages/Checkout';
@@ -124,8 +122,6 @@ function App() {
           <Route path="/necklaces" element={<CategoryPage addToCart={addToCart} products={products} category="Necklaces" />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/bespoke" element={<Bespoke />} />
-          <Route path="/heritage" element={<Heritage />} />
           <Route path="/journal" element={<Journal />} />
           
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
