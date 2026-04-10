@@ -45,40 +45,40 @@ const Home = ({ addToCart, products }) => {
         <div style={{ 
           display: 'flex', 
           justifyContent: 'center', 
-          gap: '4rem', 
+          gap: '2.5rem', 
           flexWrap: 'wrap'
         }}>
           {/* Rings Category */}
           <Link to="/rings" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
             <motion.div 
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
               style={{
-                width: 'min(300px, 80vw)',
+                width: 'min(450px, 90vw)',
                 aspectRatio: '1/1',
-                height: 'auto',
-                borderRadius: '50%',
+                borderRadius: '4px',
                 overflow: 'hidden',
                 position: 'relative',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
                 marginBottom: '1.5rem',
-                border: '1px solid var(--border-dark)'
+                border: '1px solid var(--border-light)'
               }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1598560863915-452136773517?auto=format&fit=crop&q=80&w=800" 
+                src="/images/aurelian_halo.jpg" 
                 alt="Rings Collection" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <div style={{
                 position: 'absolute',
                 top: 0, left: 0, width: '100%', height: '100%',
-                backgroundColor: 'rgba(0,0,0,0.2)',
+                background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+                paddingBottom: '2.5rem'
               }}>
-                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>Rings</h3>
+                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.2em', fontSize: '1.75rem' }}>RINGS</h3>
               </div>
             </motion.div>
           </Link>
@@ -86,34 +86,34 @@ const Home = ({ addToCart, products }) => {
           {/* Necklaces Category */}
           <Link to="/necklaces" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
             <motion.div 
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300 }}
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.3 }}
               style={{
-                width: 'min(300px, 80vw)',
+                width: 'min(450px, 90vw)',
                 aspectRatio: '1/1',
-                height: 'auto',
-                borderRadius: '50%',
+                borderRadius: '4px',
                 overflow: 'hidden',
                 position: 'relative',
-                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
+                boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
                 marginBottom: '1.5rem',
-                border: '1px solid var(--border-dark)'
+                border: '1px solid var(--border-light)'
               }}
             >
               <img 
-                src="https://images.unsplash.com/photo-1599643478524-fb965191542f?auto=format&fit=crop&q=80&w=800" 
+                src="/images/silver_band.jpg" 
                 alt="Necklaces Collection" 
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               />
               <div style={{
                 position: 'absolute',
                 top: 0, left: 0, width: '100%', height: '100%',
-                backgroundColor: 'rgba(0,0,0,0.2)',
+                background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
                 display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+                paddingBottom: '2.5rem'
               }}>
-                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>Necklaces</h3>
+                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.2em', fontSize: '1.75rem' }}>NECKLACES</h3>
               </div>
             </motion.div>
           </Link>
