@@ -45,23 +45,23 @@ const Home = ({ addToCart, products }) => {
         <div style={{ 
           display: 'flex', 
           justifyContent: 'center', 
-          gap: '2.5rem', 
+          gap: '4rem', 
           flexWrap: 'wrap'
         }}>
           {/* Rings Category */}
           <Link to="/rings" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
             <motion.div 
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
               style={{
-                width: 'min(450px, 90vw)',
+                width: 'min(300px, 80vw)',
                 aspectRatio: '1/1',
-                borderRadius: '4px',
+                borderRadius: '50%',
                 overflow: 'hidden',
                 position: 'relative',
-                boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
                 marginBottom: '1.5rem',
-                border: '1px solid var(--border-light)'
+                border: '1px solid var(--border-dark)'
               }}
             >
               <img 
@@ -72,13 +72,12 @@ const Home = ({ addToCart, products }) => {
               <div style={{
                 position: 'absolute',
                 top: 0, left: 0, width: '100%', height: '100%',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
+                backgroundColor: 'rgba(0,0,0,0.3)',
                 display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'center',
-                paddingBottom: '2.5rem'
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
-                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.2em', fontSize: '1.75rem' }}>RINGS</h3>
+                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>RINGS</h3>
               </div>
             </motion.div>
           </Link>
@@ -86,17 +85,17 @@ const Home = ({ addToCart, products }) => {
           {/* Necklaces Category */}
           <Link to="/necklaces" style={{ textDecoration: 'none', color: 'inherit', textAlign: 'center' }}>
             <motion.div 
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
+              whileHover={{ scale: 1.05 }}
+              transition={{ type: "spring", stiffness: 300 }}
               style={{
-                width: 'min(450px, 90vw)',
+                width: 'min(300px, 80vw)',
                 aspectRatio: '1/1',
-                borderRadius: '4px',
+                borderRadius: '50%',
                 overflow: 'hidden',
                 position: 'relative',
-                boxShadow: '0 15px 35px rgba(0,0,0,0.1)',
+                boxShadow: '0 20px 40px rgba(0,0,0,0.1)',
                 marginBottom: '1.5rem',
-                border: '1px solid var(--border-light)'
+                border: '1px solid var(--border-dark)'
               }}
             >
               <img 
@@ -107,13 +106,12 @@ const Home = ({ addToCart, products }) => {
               <div style={{
                 position: 'absolute',
                 top: 0, left: 0, width: '100%', height: '100%',
-                background: 'linear-gradient(to top, rgba(0,0,0,0.6), transparent)',
+                backgroundColor: 'rgba(0,0,0,0.3)',
                 display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'center',
-                paddingBottom: '2.5rem'
+                alignItems: 'center',
+                justifyContent: 'center'
               }}>
-                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.2em', fontSize: '1.75rem' }}>NECKLACES</h3>
+                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>NECKLACES</h3>
               </div>
             </motion.div>
           </Link>
