@@ -75,9 +75,17 @@ const Home = ({ addToCart, products }) => {
                 backgroundColor: 'rgba(0,0,0,0.3)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                padding: '0 10px'
               }}>
-                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>RINGS</h3>
+                <h3 style={{ 
+                  color: 'white', 
+                  letterSpacing: '0.15em', 
+                  fontSize: 'clamp(1rem, 5vw, 1.5rem)', 
+                  fontFamily: 'var(--font-serif)',
+                  textTransform: 'uppercase',
+                  textAlign: 'center'
+                }}>RINGS</h3>
               </div>
             </motion.div>
           </Link>
@@ -109,9 +117,17 @@ const Home = ({ addToCart, products }) => {
                 backgroundColor: 'rgba(0,0,0,0.3)',
                 display: 'flex',
                 alignItems: 'center',
-                justifyContent: 'center'
+                justifyContent: 'center',
+                padding: '0 10px'
               }}>
-                <h3 className="h2" style={{ color: 'white', letterSpacing: '0.1em' }}>NECKLACES</h3>
+                <h3 style={{ 
+                  color: 'white', 
+                  letterSpacing: '0.15em', 
+                  fontSize: 'clamp(1rem, 5vw, 1.5rem)', 
+                  fontFamily: 'var(--font-serif)',
+                  textTransform: 'uppercase',
+                  textAlign: 'center'
+                }}>NECKLACES</h3>
               </div>
             </motion.div>
           </Link>
